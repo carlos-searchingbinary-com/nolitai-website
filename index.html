@@ -387,16 +387,13 @@
             border-radius: 16px;
         }
 
-        .problem-item .icon {
+        .problem-number {
             flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 69, 58, 0.15);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--red);
+            font-family: var(--font-mono);
+            min-width: 40px;
         }
 
         .problem-item h4 {
@@ -627,16 +624,13 @@
             max-width: 480px;
         }
 
-        .feature-icon-large {
-            width: 64px;
-            height: 64px;
-            background: var(--gray-800);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
+        .feature-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--gray-700);
             margin-bottom: 24px;
+            font-family: var(--font-mono);
+            letter-spacing: -0.05em;
         }
 
         .feature-content h3 {
@@ -923,11 +917,6 @@
         .use-case-card:hover {
             border-color: var(--gray-600);
             transform: translateY(-4px);
-        }
-
-        .use-case-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
         }
 
         .use-case-card h4 {
@@ -1268,21 +1257,21 @@
 
             <div class="problem-list fade-up">
                 <div class="problem-item">
-                    <div class="icon">☁️</div>
+                    <div class="problem-number">01</div>
                     <div>
                         <h4>Cloud Transcription</h4>
                         <p>Every word sent to external servers for processing</p>
                     </div>
                 </div>
                 <div class="problem-item">
-                    <div class="icon">🔐</div>
+                    <div class="problem-number">02</div>
                     <div>
                         <h4>Mandatory Accounts</h4>
                         <p>Email, name, company — all tied to your conversations</p>
                     </div>
                 </div>
                 <div class="problem-item">
-                    <div class="icon">📊</div>
+                    <div class="problem-number">03</div>
                     <div>
                         <h4>Data Training</h4>
                         <p>Your meetings may train AI models you'll never use</p>
@@ -1386,7 +1375,7 @@
             <!-- Feature 1: Transcription -->
             <div class="feature-section fade-up">
                 <div class="feature-content">
-                    <div class="feature-icon-large">🎤</div>
+                    <div class="feature-number">01</div>
                     <h3>Real-Time Transcription</h3>
                     <p>
                         Capture every word as it's spoken with sub-500ms latency.
@@ -1421,7 +1410,7 @@
             <!-- Feature 2: Multilingual -->
             <div class="feature-section reverse fade-up">
                 <div class="feature-content">
-                    <div class="feature-icon-large">🌍</div>
+                    <div class="feature-number">02</div>
                     <h3>Multilingual Meetings</h3>
                     <p>
                         Real-time translation across 20+ languages. Perfect for
@@ -1452,7 +1441,7 @@
             <!-- Feature 3: AI Insights -->
             <div class="feature-section fade-up">
                 <div class="feature-content">
-                    <div class="feature-icon-large">🧠</div>
+                    <div class="feature-number">03</div>
                     <h3>AI-Powered Insights</h3>
                     <p>
                         Our fine-tuned models automatically extract action items,
@@ -1496,7 +1485,7 @@
             <!-- Feature 4: Chat with Your Meetings -->
             <div class="feature-section reverse fade-up">
                 <div class="feature-content">
-                    <div class="feature-icon-large">💬</div>
+                    <div class="feature-number">04</div>
                     <h3>Chat with Your Meetings</h3>
                     <p>
                         Ask questions about any meeting, anytime. "What did we decide
@@ -1531,7 +1520,7 @@
             <!-- Feature 5: Privacy -->
             <div class="feature-section fade-up">
                 <div class="feature-content">
-                    <div class="feature-icon-large">🔒</div>
+                    <div class="feature-number">05</div>
                     <h3>Absolute Privacy</h3>
                     <p>
                         We don't just say we're private — we're architecturally
@@ -1580,7 +1569,7 @@
 
             <div class="more-grid fade-up">
                 <div class="more-column">
-                    <h4>📝 Auto-Generated Meeting Minutes</h4>
+                    <h4>Meeting Minutes</h4>
                     <ul>
                         <li>One-click summary after every meeting</li>
                         <li>Action items with owners & deadlines</li>
@@ -1589,7 +1578,7 @@
                     </ul>
                 </div>
                 <div class="more-column">
-                    <h4>📤 Export Anywhere</h4>
+                    <h4>Export Anywhere</h4>
                     <ul>
                         <li>Apple Notes — full transcript & summary</li>
                         <li>Apple Reminders — action items as tasks</li>
@@ -1598,7 +1587,7 @@
                     </ul>
                 </div>
                 <div class="more-column">
-                    <h4>⌨️ Keyboard-First</h4>
+                    <h4>Keyboard-First</h4>
                     <ul>
                         <li>⌘⇧T — Show transcript</li>
                         <li>⌘⇧I — Show insights</li>
@@ -1607,7 +1596,7 @@
                     </ul>
                 </div>
                 <div class="more-column">
-                    <h4>🔌 Works With Everything</h4>
+                    <h4>Universal Compatibility</h4>
                     <ul>
                         <li>Zoom, Google Meet, Microsoft Teams</li>
                         <li>FaceTime, Slack Huddles</li>
@@ -1616,7 +1605,7 @@
                     </ul>
                 </div>
                 <div class="more-column">
-                    <h4>📅 Calendar Integration</h4>
+                    <h4>Calendar Integration</h4>
                     <ul>
                         <li>Auto-detects meetings from calendar</li>
                         <li>Pre-fills meeting context</li>
@@ -1625,7 +1614,7 @@
                     </ul>
                 </div>
                 <div class="more-column">
-                    <h4>🎯 Smart Detection</h4>
+                    <h4>Smart Detection</h4>
                     <ul>
                         <li>Speaker identification</li>
                         <li>Automatic punctuation</li>
@@ -1647,22 +1636,18 @@
 
             <div class="use-cases-grid fade-up">
                 <div class="use-case-card">
-                    <div class="use-case-icon">⚖️</div>
                     <h4>Legal Teams</h4>
                     <p>Attorney-client privilege protected. No third-party access to sensitive discussions.</p>
                 </div>
                 <div class="use-case-card">
-                    <div class="use-case-icon">🏥</div>
                     <h4>Healthcare</h4>
                     <p>HIPAA-friendly by design. Patient information never leaves the device.</p>
                 </div>
                 <div class="use-case-card">
-                    <div class="use-case-icon">💼</div>
                     <h4>Finance</h4>
                     <p>Compliance-ready. No audit trails in third-party systems.</p>
                 </div>
                 <div class="use-case-card">
-                    <div class="use-case-icon">👔</div>
                     <h4>Executives</h4>
                     <p>Board discussions stay confidential. No cloud, no leaks, no risk.</p>
                 </div>
