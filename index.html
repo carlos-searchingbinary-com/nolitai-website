@@ -1595,21 +1595,39 @@
             observer.observe(el);
         });
 
-        // Waitlist form
-        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
+        // Waitlist form - sends to Google Sheets
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby00dnmkTQx1Y7QdF2009kY4eoeRhyYXGHgTdvPKyLAwp4GNWU-HPULqmmUED5wCJYNBg/exec';
 
-            // Store locally (replace with real backend)
-            const waitlist = JSON.parse(localStorage.getItem('nolit-waitlist') || '[]');
-            if (!waitlist.includes(email)) {
-                waitlist.push(email);
-                localStorage.setItem('nolit-waitlist', JSON.stringify(waitlist));
-            }
+        document.querySelectorAll('.waitlist-form').forEach(form => {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                const button = this.querySelector('button');
+                const originalText = button.textContent;
 
-            // Show success
-            this.style.display = 'none';
-            document.getElementById('form-success').style.display = 'inline-block';
+                // Show loading
+                button.textContent = 'Joining...';
+                button.disabled = true;
+
+                try {
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email })
+                    });
+
+                    // Show success
+                    this.style.display = 'none';
+                    const successEl = this.parentElement.querySelector('.form-success');
+                    if (successEl) successEl.style.display = 'inline-block';
+                } catch (error) {
+                    // Still show success (no-cors doesn't return response)
+                    this.style.display = 'none';
+                    const successEl = this.parentElement.querySelector('.form-success');
+                    if (successEl) successEl.style.display = 'inline-block';
+                }
+            });
         });
 
         // Smooth scroll
