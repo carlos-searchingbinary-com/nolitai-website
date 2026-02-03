@@ -800,6 +800,49 @@
             color: var(--gray-400);
         }
 
+        /* Chat demo */
+        .chat-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .chat-message {
+            display: flex;
+        }
+
+        .chat-message.user {
+            justify-content: flex-end;
+        }
+
+        .chat-message.assistant {
+            justify-content: flex-start;
+        }
+
+        .chat-bubble {
+            max-width: 85%;
+            padding: 14px 18px;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .chat-message.user .chat-bubble {
+            background: var(--accent);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-message.assistant .chat-bubble {
+            background: var(--gray-800);
+            color: var(--gray-200);
+            border-bottom-left-radius: 4px;
+        }
+
+        .chat-bubble strong {
+            color: var(--white);
+        }
+
         /* ============================================
            USE CASES
            ============================================ */
@@ -1389,8 +1432,43 @@
                 </div>
             </div>
 
-            <!-- Feature 4: Privacy -->
+            <!-- Feature 4: Chat with Your Meetings -->
             <div class="feature-section reverse fade-up">
+                <div class="feature-content">
+                    <div class="feature-icon-large">💬</div>
+                    <h3>Chat with Your Meetings</h3>
+                    <p>
+                        Ask questions about any meeting, anytime. "What did we decide
+                        about the budget?" "What are João's action items?" Get instant
+                        answers from your private meeting history.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span class="check">✓</span> Natural language queries</li>
+                        <li><span class="check">✓</span> Search across all meetings</li>
+                        <li><span class="check">✓</span> Context-aware responses</li>
+                        <li><span class="check">✓</span> 100% private — AI runs locally</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="chat-demo">
+                        <div class="chat-message user">
+                            <div class="chat-bubble">What did we decide about the design?</div>
+                        </div>
+                        <div class="chat-message assistant">
+                            <div class="chat-bubble">In your meeting on Feb 3rd, you decided to <strong>go with the minimalist approach</strong>. Benny will send the proposal by Friday.</div>
+                        </div>
+                        <div class="chat-message user">
+                            <div class="chat-bubble">What are João's tasks?</div>
+                        </div>
+                        <div class="chat-message assistant">
+                            <div class="chat-bubble">João has 1 open task: <strong>Prepare mockups by tomorrow morning</strong>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5: Privacy -->
+            <div class="feature-section fade-up">
                 <div class="feature-content">
                     <div class="feature-icon-large">🔒</div>
                     <h3>Absolute Privacy</h3>
