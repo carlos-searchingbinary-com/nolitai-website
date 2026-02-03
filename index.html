@@ -844,6 +844,60 @@
         }
 
         /* ============================================
+           MORE FEATURES
+           ============================================ */
+        .more-features {
+            background: var(--gray-950);
+            text-align: center;
+        }
+
+        .more-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .more-column {
+            padding: 28px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: 16px;
+        }
+
+        .more-column h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+
+        .more-column ul {
+            list-style: none;
+        }
+
+        .more-column li {
+            font-size: 14px;
+            color: var(--gray-400);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-800);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .more-column li:last-child {
+            border-bottom: none;
+        }
+
+        .more-column li::before {
+            content: '✓';
+            color: var(--green);
+            font-size: 12px;
+        }
+
+        /* ============================================
            USE CASES
            ============================================ */
         .use-cases {
@@ -1082,9 +1136,16 @@
             .use-cases-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .more-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
+            .more-grid {
+                grid-template-columns: 1fr;
+            }
             section {
                 padding: 100px 0;
             }
@@ -1506,6 +1567,73 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- ============================================
+         MORE FEATURES
+         ============================================ -->
+    <section class="more-features">
+        <div class="container">
+            <p class="eyebrow">And More</p>
+            <h2 class="headline-lg">Everything you need to<br>own your meetings.</h2>
+
+            <div class="more-grid fade-up">
+                <div class="more-column">
+                    <h4>📝 Auto-Generated Meeting Minutes</h4>
+                    <ul>
+                        <li>One-click summary after every meeting</li>
+                        <li>Action items with owners & deadlines</li>
+                        <li>Key decisions captured automatically</li>
+                        <li>Searchable meeting history</li>
+                    </ul>
+                </div>
+                <div class="more-column">
+                    <h4>📤 Export Anywhere</h4>
+                    <ul>
+                        <li>Apple Notes — full transcript & summary</li>
+                        <li>Apple Reminders — action items as tasks</li>
+                        <li>Mail — share meeting notes instantly</li>
+                        <li>Markdown — for your docs & wikis</li>
+                    </ul>
+                </div>
+                <div class="more-column">
+                    <h4>⌨️ Keyboard-First</h4>
+                    <ul>
+                        <li>⌘⇧T — Show transcript</li>
+                        <li>⌘⇧I — Show insights</li>
+                        <li>⌘⇧A — Quick ask</li>
+                        <li>⌘⇧R — Start/stop meeting</li>
+                    </ul>
+                </div>
+                <div class="more-column">
+                    <h4>🔌 Works With Everything</h4>
+                    <ul>
+                        <li>Zoom, Google Meet, Microsoft Teams</li>
+                        <li>FaceTime, Slack Huddles</li>
+                        <li>Any app that produces audio</li>
+                        <li>Works completely offline</li>
+                    </ul>
+                </div>
+                <div class="more-column">
+                    <h4>📅 Calendar Integration</h4>
+                    <ul>
+                        <li>Auto-detects meetings from calendar</li>
+                        <li>Pre-fills meeting context</li>
+                        <li>Links transcripts to events</li>
+                        <li>Apple Calendar sync</li>
+                    </ul>
+                </div>
+                <div class="more-column">
+                    <h4>🎯 Smart Detection</h4>
+                    <ul>
+                        <li>Speaker identification</li>
+                        <li>Automatic punctuation</li>
+                        <li>Language detection</li>
+                        <li>Filler word filtering</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
