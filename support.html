@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — nolit.ai</title>
+    <meta name="description" content="Get help with nolit.ai. Troubleshooting, FAQs, and contact information.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nolit.ai/support">
+    <meta property="og:title" content="Support — nolit.ai">
+    <meta property="og:description" content="Get help with nolit.ai. Troubleshooting, FAQs, and contact information.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23fff'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%23000' font-family='system-ui' font-size='20' font-weight='700'%3En%3C/text%3E%3C/svg%3E">
+
+    <style>
+        :root {
+            --black: #000000;
+            --gray-950: #0a0a0a;
+            --gray-900: #111111;
+            --gray-800: #1a1a1a;
+            --gray-700: #2a2a2a;
+            --gray-600: #3a3a3a;
+            --gray-500: #6b6b6b;
+            --gray-400: #8b8b8b;
+            --gray-300: #ababab;
+            --gray-200: #d4d4d4;
+            --gray-100: #f0f0f0;
+            --white: #ffffff;
+            --accent: #0a84ff;
+            --accent-light: #409cff;
+            --green: #30d158;
+            --orange: #ff9f0a;
+            --purple: #bf5af2;
+            --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: var(--font);
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.5;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 16px 24px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-800);
+        }
+
+        nav .inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-back {
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-back:hover { text-decoration: underline; }
+
+        /* Content */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .content h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: var(--gray-400);
+            margin-bottom: 48px;
+            line-height: 1.5;
+        }
+
+        /* Contact card */
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: 16px;
+            margin-bottom: 48px;
+            text-decoration: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--gray-600);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .contact-icon.email { background: rgba(10, 132, 255, 0.15); }
+        .contact-icon.github { background: rgba(171, 171, 171, 0.15); }
+
+        .contact-info h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+
+        .contact-info p {
+            font-size: 15px;
+            color: var(--gray-400);
+        }
+
+        /* FAQ */
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+        }
+
+        .faq-item {
+            padding: 24px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: 16px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        .faq-item code {
+            background: var(--gray-800);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--gray-200);
+        }
+
+        .faq-item a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .faq-item a:hover { text-decoration: underline; }
+
+        /* Requirements */
+        .requirements {
+            margin-top: 48px;
+        }
+
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .req-card {
+            padding: 20px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: 12px;
+        }
+
+        .req-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-300);
+            margin-bottom: 8px;
+        }
+
+        .req-card p {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        /* Shortcuts */
+        .shortcuts {
+            margin-top: 48px;
+        }
+
+        .shortcut-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .shortcut-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: 12px;
+        }
+
+        .shortcut-label {
+            font-size: 15px;
+            color: var(--gray-300);
+        }
+
+        .shortcut-keys {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-200);
+            background: var(--gray-800);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: -apple-system, system-ui, sans-serif;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--gray-800);
+        }
+
+        .footer-content {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-right a {
+            font-size: 13px;
+            color: var(--gray-500);
+            text-decoration: none;
+        }
+
+        .footer-right a:hover { color: var(--white); }
+
+        @media (max-width: 768px) {
+            .req-grid, .shortcut-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="inner">
+            <a href="/" class="logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <rect width="28" height="28" rx="6" fill="white"/>
+                    <text x="14" y="20" text-anchor="middle" fill="black" font-family="-apple-system, system-ui, sans-serif" font-size="18" font-weight="700">n</text>
+                </svg>
+                <span>nolit.ai</span>
+            </a>
+            <a href="/" class="nav-back">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Support</h1>
+        <p class="subtitle">Need help with nolit.ai? Find answers below or get in touch.</p>
+
+        <!-- Contact -->
+        <a href="mailto:support@nolit.ai" class="contact-card">
+            <div class="contact-icon email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a84ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M22 7l-10 7L2 7"/>
+                </svg>
+            </div>
+            <div class="contact-info">
+                <h3>Email Support</h3>
+                <p>support@nolit.ai — We typically respond within 24 hours</p>
+            </div>
+        </a>
+
+        <!-- FAQ -->
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How do I grant Screen Recording permission?</h3>
+            <p>Go to <strong>System Settings &gt; Privacy &amp; Security &gt; Screen Recording</strong> and enable nolit.ai. This permission allows the app to capture system audio from meeting apps. It does not record your screen — only the audio stream is used.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why does nolit.ai need Screen Recording for audio?</h3>
+            <p>On macOS, capturing system audio (what comes through your speakers) requires the Screen Recording permission via Apple's ScreenCaptureKit framework. This is an Apple platform requirement, not a design choice. nolit.ai only captures the audio stream — no screenshots or video are taken.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does nolit.ai work offline?</h3>
+            <p>Yes, completely. All transcription, AI analysis, and translation run on your Mac using locally installed models. The only time nolit.ai needs internet is during initial setup to download AI models.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How much disk space do the AI models need?</h3>
+            <p>The required Meeting Intelligence model is approximately 2.5 GB. Optional models (speaker recognition, enhanced transcription, chat, visual detection) add 1-4 GB each. You choose which to download during setup.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Which Macs are supported?</h3>
+            <p>nolit.ai requires a Mac with Apple Silicon (M1, M2, M3, M4 or later) running macOS 14 Sonoma or later. The AI models use the Neural Engine and Metal GPU, which are only available on Apple Silicon.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Which meeting apps does nolit.ai work with?</h3>
+            <p>nolit.ai works with any app that produces audio: Zoom, Google Meet, Microsoft Teams, FaceTime, Slack Huddles, and more. It captures system audio, so it's not limited to specific apps.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Where is my meeting data stored?</h3>
+            <p>All data is stored locally on your Mac at <code>~/Library/Application Support/NolitAI/</code>. Data is encrypted at rest with AES-256. You can delete all data anytime from Settings &gt; Privacy.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I delete all my data?</h3>
+            <p>Open nolit.ai, go to Settings &gt; Privacy, and click "Delete All Data". This permanently removes all stored meetings, transcripts, and insights from your Mac. You can also manually delete the folder at <code>~/Library/Application Support/NolitAI/</code>.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I export my meetings?</h3>
+            <p>Yes. nolit.ai supports exporting to Apple Notes, Apple Reminders, Mail, Markdown, PDF, and JSON. Use the Export button on any meeting detail view.</p>
+        </div>
+
+        <!-- Keyboard Shortcuts -->
+        <div class="shortcuts">
+            <h2 class="section-title">Keyboard Shortcuts</h2>
+            <div class="shortcut-grid">
+                <div class="shortcut-row">
+                    <span class="shortcut-label">New Meeting</span>
+                    <span class="shortcut-keys">&#8984;N</span>
+                </div>
+                <div class="shortcut-row">
+                    <span class="shortcut-label">Start Meeting</span>
+                    <span class="shortcut-keys">&#8984;&#8679;R</span>
+                </div>
+                <div class="shortcut-row">
+                    <span class="shortcut-label">Stop Meeting</span>
+                    <span class="shortcut-keys">&#8984;&#8679;S</span>
+                </div>
+                <div class="shortcut-row">
+                    <span class="shortcut-label">Show Transcript</span>
+                    <span class="shortcut-keys">&#8984;&#8679;T</span>
+                </div>
+                <div class="shortcut-row">
+                    <span class="shortcut-label">Show Insights</span>
+                    <span class="shortcut-keys">&#8984;&#8679;I</span>
+                </div>
+                <div class="shortcut-row">
+                    <span class="shortcut-label">Quick Ask</span>
+                    <span class="shortcut-keys">&#8984;&#8679;A</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Requirements -->
+        <div class="requirements">
+            <h2 class="section-title">System Requirements</h2>
+            <div class="req-grid">
+                <div class="req-card">
+                    <h4>Processor</h4>
+                    <p>Apple Silicon (M1 or later)</p>
+                </div>
+                <div class="req-card">
+                    <h4>Operating System</h4>
+                    <p>macOS 14 Sonoma or later</p>
+                </div>
+                <div class="req-card">
+                    <h4>Memory</h4>
+                    <p>8 GB RAM minimum</p>
+                </div>
+                <div class="req-card">
+                    <h4>Storage</h4>
+                    <p>3 GB minimum (+ optional models)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                &copy; 2026 nolit.ai — Not Lost in Translation, lit up by AI
+            </div>
+            <div class="footer-right">
+                <a href="/privacy">Privacy</a>
+                <a href="/support">Support</a>
+                <a href="mailto:hello@nolit.ai">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

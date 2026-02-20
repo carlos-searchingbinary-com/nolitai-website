@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — nolit.ai</title>
+    <meta name="description" content="nolit.ai privacy policy. All processing happens on your Mac. We collect nothing.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nolit.ai/privacy">
+    <meta property="og:title" content="Privacy Policy — nolit.ai">
+    <meta property="og:description" content="All processing happens on your Mac. We collect nothing.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23fff'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%23000' font-family='system-ui' font-size='20' font-weight='700'%3En%3C/text%3E%3C/svg%3E">
+
+    <style>
+        :root {
+            --black: #000000;
+            --gray-950: #0a0a0a;
+            --gray-900: #111111;
+            --gray-800: #1a1a1a;
+            --gray-700: #2a2a2a;
+            --gray-600: #3a3a3a;
+            --gray-500: #6b6b6b;
+            --gray-400: #8b8b8b;
+            --gray-300: #ababab;
+            --gray-200: #d4d4d4;
+            --gray-100: #f0f0f0;
+            --white: #ffffff;
+            --accent: #0a84ff;
+            --green: #30d158;
+            --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: var(--font);
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.5;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 16px 24px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-800);
+        }
+
+        nav .inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-back {
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-back:hover { text-decoration: underline; }
+
+        /* Content */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .content h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 48px;
+        }
+
+        .tldr {
+            padding: 24px;
+            background: rgba(48, 209, 88, 0.08);
+            border: 1px solid rgba(48, 209, 88, 0.2);
+            border-radius: 16px;
+            margin-bottom: 48px;
+        }
+
+        .tldr h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--green);
+            margin-bottom: 12px;
+        }
+
+        .tldr p {
+            font-size: 17px;
+            color: var(--gray-200);
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        .content p {
+            font-size: 17px;
+            color: var(--gray-300);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .content ul {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        .content ul li {
+            font-size: 17px;
+            color: var(--gray-300);
+            line-height: 1.7;
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+
+        .content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .content a:hover { text-decoration: underline; }
+
+        .content strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            padding: 20px 24px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            color: var(--gray-200);
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--gray-800);
+        }
+
+        .footer-content {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-right a {
+            font-size: 13px;
+            color: var(--gray-500);
+            text-decoration: none;
+        }
+
+        .footer-right a:hover { color: var(--white); }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="inner">
+            <a href="/" class="logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <rect width="28" height="28" rx="6" fill="white"/>
+                    <text x="14" y="20" text-anchor="middle" fill="black" font-family="-apple-system, system-ui, sans-serif" font-size="18" font-weight="700">n</text>
+                </svg>
+                <span>nolit.ai</span>
+            </a>
+            <a href="/" class="nav-back">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: February 20, 2026</p>
+
+        <div class="tldr">
+            <h2>The Short Version</h2>
+            <p>nolit.ai processes everything on your Mac. We have no servers, no accounts, no analytics, and no way to access your data. Your meetings are yours alone.</p>
+        </div>
+
+        <h2>What We Collect</h2>
+        <p><strong>Nothing.</strong> nolit.ai does not collect, transmit, or store any personal data on external servers. We do not operate servers. There is no data to collect.</p>
+
+        <h2>How nolit.ai Works</h2>
+        <p>nolit.ai is a native macOS application that runs entirely on your Mac. All processing happens locally on your device:</p>
+        <ul>
+            <li><strong>Audio capture</strong> is processed by Apple's ScreenCaptureKit and Speech frameworks, on your Mac</li>
+            <li><strong>Transcription</strong> uses Apple's on-device Speech framework — no audio is sent anywhere</li>
+            <li><strong>AI insights</strong> are generated by machine learning models running locally on your Apple Silicon chip</li>
+            <li><strong>Translation</strong> uses Apple's on-device Translation framework</li>
+            <li><strong>Meeting data</strong> is stored as encrypted files in your local Application Support directory</li>
+        </ul>
+
+        <h2>Network Connections</h2>
+        <p>nolit.ai makes <strong>no network connections</strong> during normal use. The app works completely offline.</p>
+        <p>The only network activity occurs if you choose to download optional AI models during initial setup. These downloads fetch model weights from Hugging Face (a public model repository) and do not transmit any of your data.</p>
+
+        <h2>Data Storage</h2>
+        <p>All meeting transcripts, insights, and summaries are stored locally on your Mac in:</p>
+        <div class="highlight-box">
+            <p><code>~/Library/Application Support/NolitAI/</code></p>
+        </div>
+        <p>Data is encrypted at rest using AES-256 encryption. You can delete all stored data at any time from the app's Privacy settings, or by simply deleting the folder above.</p>
+
+        <h2>No Accounts</h2>
+        <p>nolit.ai does not require you to create an account. There is no sign-up, no login, no email collection. You download the app and it works.</p>
+
+        <h2>No Analytics or Tracking</h2>
+        <p>We do not use any analytics frameworks, crash reporters, or tracking pixels. We do not know how many people use nolit.ai, how often they use it, or what features they use. This is intentional.</p>
+
+        <h2>No Third-Party Services</h2>
+        <p>nolit.ai does not integrate with any third-party services that could access your data. There are no SDKs, no embedded frameworks, and no APIs that phone home.</p>
+
+        <h2>macOS Permissions</h2>
+        <p>nolit.ai requests the following macOS permissions, all of which are processed entirely on-device:</p>
+        <ul>
+            <li><strong>Screen Recording</strong> — to capture system audio from meeting apps via ScreenCaptureKit</li>
+            <li><strong>Microphone</strong> — optional, for capturing your own voice alongside system audio</li>
+            <li><strong>Calendar</strong> — optional, to auto-detect scheduled meetings and pre-fill context</li>
+            <li><strong>Reminders</strong> — optional, to export action items as tasks</li>
+            <li><strong>Speech Recognition</strong> — to use Apple's on-device speech-to-text engine</li>
+        </ul>
+        <p>None of these permissions result in data leaving your Mac. Apple's frameworks process everything locally.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>nolit.ai does not collect data from anyone, including children. There is nothing to comply with because there is nothing to collect.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If we ever change this policy, we will update this page. Given our architecture (no servers, no data collection), significant changes are unlikely.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, contact us at <a href="mailto:hello@nolit.ai">hello@nolit.ai</a>.</p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                &copy; 2026 nolit.ai — Not Lost in Translation, lit up by AI
+            </div>
+            <div class="footer-right">
+                <a href="/privacy">Privacy</a>
+                <a href="/support">Support</a>
+                <a href="mailto:hello@nolit.ai">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
